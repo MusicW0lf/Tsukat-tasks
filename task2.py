@@ -3,12 +3,12 @@ import string
 import time
 import matplotlib.pyplot as plt
 from collections import defaultdict
-def group_anagrams(words):
+def group_anagrams(strs):
     start_time = time.time()
 
     anagram_map = defaultdict(list)
 
-    for word in words:
+    for word in strs:
         char_count = [0] * 26
         for char in word:
             char_count[ord(char) - ord('a')] += 1
@@ -44,4 +44,4 @@ plt.grid(True)
 plt.legend()
 plt.show()
 
-# time complexity O(n*m)
+# time complexity O(size_values * lengths)

@@ -1,9 +1,9 @@
 from collections import defaultdict
-def group_anagrams(words):
+def group_anagrams(strs):
     
     anagram_map = defaultdict(list)
 
-    for word in words:
+    for word in strs:
         char_count = [0] * 26
         for char in word:
             char_count[ord(char) - ord('a')] += 1
